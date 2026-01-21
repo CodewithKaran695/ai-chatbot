@@ -19,14 +19,20 @@ def chat_page(request):
         {
             "role": "system",
             "content": (
-                "You are a helpful assistant. "
-                "Format responses clearly using short paragraphs, bullet points, "
-                "headings where appropriate, and line breaks for readability."
+                "You are a helpful and friendly AI assistant. "
+                "Structure answers clearly using headings and subheadings. "
+                "Headings should be short and meaningful. "
+                "Use emojis where appropriate. "
+                "Break content into short paragraphs or bullet points."
             )
         },
-        {"role": "user", "content": user_message}
+        {
+            "role": "user",
+            "content": user_message
+        }
     ]
 )
+
             
 
             ai_reply = response.choices[0].message.content
